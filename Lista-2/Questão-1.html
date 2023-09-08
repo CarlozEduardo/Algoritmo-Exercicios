@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua Cidade Natal ?
+    <input type="text" id="citynatal"><br>
+    Qual é seu ano de nascimento ?
+    <input type="text" id="ano_nasc"><br>
+<button onclick="Calcular()">Cadastrar</button>
+</body>
+<script>
+    function Calcular() {
+        alert("Você nasceu na cidade de " + citynatal.value + " em "+ ano_nasc.value);
+    }
+</script>
+</html>

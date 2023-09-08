@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual é sua frequência nas aulas ?
+    <input id="freq">
+    <button onclick="Analise()">Analisar frequência</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function Analise() {
+        var frequencia = Number(freq.value)
+        if (frequencia < 50) {
+            resultado.innerHTML = 
+            `
+            <img src="https://historiasdeanimais.com.br/wp-content/uploads/2023/03/aaaaaaaaaa-1024x576.jpg"/>
+            `
+        } else {
+            resultado.innerHTML =
+            `
+            <img src="https://pbs.twimg.com/media/E-nh14YXEAcw4LK.jpg"/>
+            `
+
+        }
+    }
+</script>

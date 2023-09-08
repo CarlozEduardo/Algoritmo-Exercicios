@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        Digite seu nome:
+        <input type="text" id="nome" >
+<br>
+        Digite sua nota da avaliação continuada:
+        <input type="text" id="avaContinuada">
+<br>
+        Digite sua nota da avaliação semestral:
+        <input type="text" id="avaSemestral">
+<br>
+        <button onclick="mediaEstagio()">
+            Ver média para o estágio
+        </button>
+</body>
+<script>
+    function mediaEstagio(){
+
+        var continuada = Number(avaContinuada.value)
+        var semestral = Number(avaSemestral.value)
+        var media = (continuada * 40/100 + semestral * 60/100 /2)
+
+        alert(
+            `A média do ${nome.value} será de ${media}`
+        )
+    }
+</script>
+</html>

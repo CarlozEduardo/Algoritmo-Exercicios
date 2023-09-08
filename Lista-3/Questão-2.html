@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos votos o 'Candidato A' teve na eleição?
+    <input type="text" id="CandidatoA"><br>
+    Quantos votos o 'Candidato B' teve na eleição?
+    <input type="text" id="CandidatoB"><br>
+    Quantos votos em Branco teve na eleição?
+    <input type="text" id="brancos"><br>
+    Quantos votos nulos houveram na eleição?
+    <input type="text" id="nulos"><br>
+    <button onclick="resultadoA()">Resultado da Eleição</button>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function resultadoA() {
+        var CandA = Number(CandidatoA.value);
+        var CandB = Number(CandidatoB.value);
+        var white = Number(brancos.value);
+        var nulo = Number(nulos.value);
+        var resultado = CandA + CandB + white + nulo;
+        result.innerHTML = 
+        `
+        Total de Votos: ${resultado}<br>
+        Candidato A: ${CandA /resultado * 100}% (${CandA} VOTOS)<br>
+        Candidato B: ${CandB /resultado * 100}% (${CandB} VOTOS)<br>
+        Invalidos: 25% (${white + nulo} VOTOS)
+        `
+    }
+</script>

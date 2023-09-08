@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual é seu nome ? 
+    <input id="input_nomePassageiro"><br>
+    Qual a distancia do local atual para o destino?(em KM)
+    <input id="input_kmDestino"><br>
+    Qual a bandeira da Corrida ? 
+    <input type="Number" id="input_BandeiraCorrida" min="1" max="3"><br>
+    Qual o horario da corrida ?
+    <input type="Number" id="input_horas" min="1" max="23"> <br>
+    <button onclick="Calcular()">Calcular corrida</button><br>
+    <div id="resultado"></div>
+</body>
+<script>
+    function Calcular() {
+    var km = Number(input_kmDestino.value);
+    var bandeira = Number(input_BandeiraCorrida.value);
+    var horarioCorrida = Number(input_horas.value);
+
+        var total = km * 1.25;
+        total = ((bandeira * 5)*total/100)+total;
+
+     if (horarioCorrida >= 7) {
+        var total = km * 1.25;
+        total = ((bandeira * 10)*total/100)+total;
+    }
+    if (horarioCorrida >= 13) {
+        var total = km * 1.25;
+        total =((bandeira * 15)*total/100)+total;
+    }
+    resultado.innerHTML = 
+    `
+    Olá ${input_nomePassageiro.value} Sua corrida, será na bandeira ${bandeira}, percorrerá ${km} km e o total da corrida será de ${total}`
+    }
+</script>
+</html>

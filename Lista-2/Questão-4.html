@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual nome da rua/avenida/vila onde você mora ?
+    <input type="text" id="CEP"> <br>
+    Qual número da sua casa ?
+    <input type="text" id="num"> <br>
+    <button onclick="local()">Onde eu moro</button>
+</body>
+<script>
+    function local() {
+        alert("Seu logradouro é "+ CEP.value);
+        alert("O número do seu logradouro é "+ num.value);
+    }
+</script>
+</html>

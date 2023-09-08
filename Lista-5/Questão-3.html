@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos chocolates foram comprados ?
+    <input id="input_chocolate">
+    <button onclick="Calcular()">Compra</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function Calcular() {
+        var qntChocolate = Number(input_chocolate.value);
+        if (qntChocolate > 12) {
+            var total = qntChocolate * 2.5; 
+        resultado.innerHTML = 
+        `
+        o valor da sua compra foi de ${total}
+        `
+    } else {
+        var total = qntChocolate * 3;
+        resultado.innerHTML = 
+        `
+        O valor da sua compra foi de ${total}
+        `
+    }
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o preço da pizza ? 
+    <input id="valorpizza"> <br>
+    Em quantos amigos estão ? 
+    <input id="amigos"> <br>
+    <button onclick="pizza()">Rola a pizza?</button>
+    <div id="precopizza"></div>
+</body>
+<script>
+    function pizza() {
+        var divisao_pizza = Number(valorpizza.value) / Number(amigos.value);
+        precopizza.innerHTML = 
+        `
+        Cada amigo vai pagar R$${divisao_pizza} pela pizza
+        `
+        if (divisao_pizza > 20) {
+            precopizza.innerHTML += 
+            `
+            <font color=FF"0000"><i><b>Deu ruim! Pizza muito cara!</b></i></font>
+            `
+        }
+    }
+</script>
+</html>

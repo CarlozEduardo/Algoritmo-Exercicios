@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sabor ? <input type="text" id="sabor"><br>
+    Qual preço ? <input type="text" id="preco"><br>
+    Quantos amigos irão comer <input type="text" id="amizade"><br>
+    <button onclick="Calcular()">Ver valor por amigo</button>
+    <div id="div_resultado"></div>
+</body>
+<script>
+    function Calcular() {
+        var total = (Number(preco.value)*10 / 100) + Number(preco.value);
+        var resultado = total / Number(amizade.value)
+        div_resultado.innerHTML = `Cada amigo vai colaborar com R$${resultado} para a pizza de ${sabor.value}`
+    }
+</script>
+</html>

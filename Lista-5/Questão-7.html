@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de homens no elevador:
+    <input id="H"> <br>
+    QUantidade de mulheres no elevador:
+    <input id="M"> <br>
+    <button onclick="Ligar()">Ligar elevador</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function Ligar() {
+        var Homem = Number(H.value) * 90;
+        var Mulher = Number(M.value) * 70;
+        var Total = Homem + Mulher;
+
+        if (Total < 500) {
+        resultado.innerHTML = 
+        `
+        <font color="00FF00">Elevador vai se mover, pois está com ${Total}kg</font>
+        `
+        } else {
+            Total = Total - 500
+        resultado.innerHTML = 
+        `
+        <font color="FF0000">Alguém precisa descer. Precisa perder ${Total}kg para mover o elevador</font>
+        `
+        }
+    }
+</script>

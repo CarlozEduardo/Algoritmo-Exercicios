@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual é o KI base do sayajin? <input type="text" id="ki"> <br>
+    Tranformar em...<br>
+    <button onclick="SSJ()">SSJ</button>
+    <button onclick="SSJ2()">SSJ2</button>
+    <button onclick="SSJ3()">SSJ3</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function SSJ() {
+     var total = Number(ki.value) * 50
+     resultado.innerHTML =
+     `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${total}`
+    }
+</script>
+<script>
+    function SSJ2() {
+     var total = Number(ki.value) * 100
+     resultado.innerHTML =
+     `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${total}`
+    }
+</script>
+<script>
+    function SSJ3() {
+     var total = Number(ki.value) * 200
+     resultado.innerHTML =
+     `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${total}`
+    }
+</script>

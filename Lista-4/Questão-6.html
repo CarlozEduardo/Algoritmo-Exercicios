@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual é o valor da renda familiar ?
+    <input id="renda_familiar">
+    Qual é o valor da prestação ?
+    <input id="valor_prestacao">
+    <button onclick="Verificar()">Verificar financiamento</button>
+    <div id="resultado"></div>
+</body>
+<script>
+    function Verificar() {
+        var renda = Number(renda_familiar.value);
+        var valor = Number(valor_prestacao.value);
+        var total = (valor/renda)*100;
+
+        resultado.innerHTML =
+        `A prestação corresponde a ${total}% da renda familiar`
+        if (total>30) {
+            resultado.innerHTML =
+        `
+        <font color="FF0000"><b>Será necessário complementar a renda familiar</b></font>
+        `
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Escreva um numero <input type="text" id="numero">
+    <button onclick="Tabuada()">Ver tabuada</button>
+    <div id="tela"></div>
+</body>
+<script>
+    function Tabuada() {
+        tela.innerHTML =
+        `
+        ${numero.value} x 1 = ${numero.value * 1}<br>
+        ${numero.value} x 2 = ${numero.value * 2}<br>
+        ${numero.value} x 3 = ${numero.value * 3}<br>
+        ${numero.value} x 4 = ${numero.value * 4}<br>
+        ${numero.value} x 5 = ${numero.value * 5}<br>
+        ${numero.value} x 6 = ${numero.value * 6}<br>
+        ${numero.value} x 7 = ${numero.value * 7}<br>
+        ${numero.value} x 8 = ${numero.value * 8}<br>
+        ${numero.value} x 9 = ${numero.value * 9}<br>
+        `
+    }
+</script>
+</html>

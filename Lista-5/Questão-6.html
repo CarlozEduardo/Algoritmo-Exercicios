@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Coloque a temperatura do ambiente:
+    <input id="temp">
+    <button onclick="Verificacao()">Verificar clima</button>
+    <div id="resultado"></div>
+</body>
+<script>
+    function Verificacao() {
+    var temperatura = Number(temp.value);
+    if (temperatura >= 10) {
+        resultado.innerHTML = 
+        `
+        <img src="https://pbs.twimg.com/media/F1PnrzMXwAAR9PY.png"/>
+        `
+    } else {
+        resultado.innerHTML = 
+        `
+        <img src="https://i.pinimg.com/736x/e0/61/91/e061919d6c213b3d7793532a1130c876.jpg"/>
+        `
+    }
+    }
+</script>
+</html>

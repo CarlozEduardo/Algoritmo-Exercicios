@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome de seu guerreiro:
+    <input type="text" id="guerreiro" >
+<br>
+    Digite o ki na forma base do seu guerreiro:
+    <input type="text" id="kiGuerreiro">
+<br>
+    <button onclick="kiSuperSayaijin()">
+        Ver ki no super sayaijin
+    </button>
+<br>
+    <button onclick="kiSuperSayaijin2()">
+        Ver ki no super sayaijin 2
+    </button>
+
+</body>
+<script>
+    function kiSuperSayaijin(){
+
+        var superSayaijin = kiGuerreiro.value * 50
+
+        alert(
+            `O guerreiro ${guerreiro.value} tem ${superSayaijin} de ki`
+        )
+    }
+    function kiSuperSayaijin2(){
+
+        var superSayaijin2 = kiGuerreiro.value * 100
+
+        alert(
+            `O guerreiro ${guerreiro.value} tem ${superSayaijin2} de ki`
+        )
+    }
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual é sua primeira nota?
+    <input id="Nota1"> <br>
+    Qual é sua segunda nota?
+    <input id="Nota2"> <br>
+    <button onclick="Media()">Verificar situação</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function Media() {
+    var primeira_nota = Number(Nota1.value);
+    var segunda_nota = Number(Nota2.value);
+    var media = primeira_nota + segunda_nota / 2;
+
+    if (media >= 6) {
+        resultado.innerHTML = 
+        `
+        Parabéns, aprovado!
+        `
+    } else {
+        resultado.innerHTML = 
+        `
+        Tente outra vez...
+        `
+    }
+    }
+</script>
