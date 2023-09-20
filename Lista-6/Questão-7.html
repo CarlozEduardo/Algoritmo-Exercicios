@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><div id="resultado1">
+    Digite o valor economizado :
+    <input type="text" id="valor">
+    <button onclick="verificar()">Poder de compra</button></div>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var economia = Number(valor.value);
+
+        if (economia <= 0) {
+            resultado1.innerHTML= `Nada de compras :(`
+        } else if(economia <= 100) {
+            resultado.innerHTML= `Viajem de ida e volta pra Praia Grande`
+        } else if(economia < 4000) {
+            resultado.innerHTML= `Viajem de ida e volta pra Praia Grande <br> Uma boa moto usada`
+        } else {
+            resultado.innerHTML= `Viajem de ida e volta pra Praia Grande <br> Uma boa moto usada <br> Mais alguma bobagem legal`
+        } 
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual time grande de SP você torce ?
+    <input type="text" id="time_torcida">
+    <button onclick="VaiCorinthians()">Fale sobre esse time</button>
+    <div id="resultado"></div>
+    <span style="background-color: black; color: red;"></span>
+</body>
+</html>
+<script>
+    function VaiCorinthians() {
+        var time = time_torcida.value;
+
+        if (time == "Corinthians") {
+            resultado.innerHTML= 
+            `<span style="background-color: black; color: white;">Salve o Corinthians</span>`
+        } else if (time == "Palmeiras"){
+            resultado.innerHTML = 
+            `
+            <span style="background-color: green; color: white;">Salve o alviverde imponente</span>
+            `
+        } else if (time == "Santos"){
+            resultado.innerHTML= 
+            `
+            Agora quem dá a bola é o Santos
+            `
+        } else if(time == "São Paulo") {
+            resultado.innerHTML =
+            `
+            <span style="background-color: black; color: red;">Salve o Tricolor paulista</span>
+            `
+        }
+    }
+</script>

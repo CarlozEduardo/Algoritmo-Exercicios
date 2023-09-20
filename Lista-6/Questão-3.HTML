@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a temperatura local :
+    <input type="text" id="temperatura">
+    <button onclick="sensacaoTermica()">Veja a situação</button>
+</body>
+</html>
+<script>
+    function sensacaoTermica() {
+        var temp = Number(temperatura.value)
+
+        if (temp < 14) {
+            resultado.innerHTML = `Congelante`
+        } else if (temp < 21) {
+            resultado.innerHTML = `Com frio`
+        } else if (temp < 24) {
+            resultado.innerHTML = `Confortável`
+        } else if (temp < 31){
+            resultado.innerHTML = `Com calor`
+        } else {
+            resultado.innerHTML = `Calor escaldante`
+        }
+    }
+</script>
