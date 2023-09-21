@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor da renda individual:
+    <input type="text" id="input_valorrenda"> <br>
+    Digite o valor da renda familiar:
+    <input type="text" id="input_rendafamiliar"> <br>
+    <button onclick="verificar()">Terei o benefício</button>
+    <span id="resultado"></span>
+</body>
+</html>
+<script>
+    function verificar() {
+        var valorRenda = Number(input_valorrenda.value);
+        var rendaFamiliar = Number(input_rendafamiliar.value);
+
+        if (valorRenda <= 2000 || rendaFamiliar <= 3000) {
+            resultado.innerHTML = "Você terá direito ao auxílio"
+        } else {
+            resultado.innerHTML = "Sem direito ao auxílio"
+        }
+    }
+</script>

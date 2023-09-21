@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual modo de pagamento?(D = Dinheiro, CD = Cartão de débito, CC = Cartão de crédito, B =Boleto)
+    <input type="text" id="input_pagamento" placeholder="D, CD , CC, B"> <br>
+    <button onclick="analise()">Analisar compra</button>
+    <span id="resultado"></span>
+</body>
+</html>
+<script>
+    function analise() {
+        var pagamento = input_pagamento.value;
+
+        if (pagamento == "D" || pagamento == "CD") {
+            resultado.innerHTML = "Você terá que pagar a vista"
+        } else if (pagamento == "CC" || pagamento == "B") {
+            resultado.innerHTML = "Pagamento poderá ser parcelado"
+        } else {
+            alert("ERRO");
+        }
+    }
+</script>
