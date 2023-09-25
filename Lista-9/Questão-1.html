@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <img id="aomossar" style="width: 100px;" src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/479424090057328031e7b1170679296c0b4dcd9ca26c7ee242070890e7cc895c_1.jpg"></img>
+    <br><button onclick="aumentar()">Aumentar a largura</button>
+    <button onclick="reduzir()">Reduzir a largura</button>
+  
+</body>
+</html>
+<script>
+    var largura = 100
+    function aumentar() {
+        largura += 10
+        aomossar.style.width = largura + "px"
+    }
+    function reduzir() {
+        largura -= 10
+        aomossar.style.width = largura + "px"
+    }
+</script>
