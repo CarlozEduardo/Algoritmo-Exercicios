@@ -12,23 +12,23 @@
     <button onclick="direita()">Mover p/ Direita</button>
     <input id="pixel" type="text" placeholder="Quantos pixels">
     <button onclick="Atualizar()">Pixel</button><br>
-    <img id="bart" style="margin-left: 0px;"
+    <img style="margin-left: 0px;"
         src="https://3fc4ed44-3fbc-419a-97a1-a29742511391.selcdn.net/coub_storage/coub/simple/cw_timeline_pic/c3bed773ae1/dc7de2ad91dff985f045e/1411423702_1400499226_image.jpg">
 </body>
 
 </html>
 <script>
     var pixels = 0;
+    var valor = 0;
     function Atualizar() {
         pixels = Number(pixel.value);
-        bart.style.marginLeft = pixels + "px"
     }
     function esquerda() {
-        pixels -= 10;
-        bart.style.marginLeft = pixels + "px"
+        valor -= pixels;
+        bart.style.marginLeft = valor + "px"
     }
     function direita() {
-        pixels += 10;
-        bart.style.marginLeft = pixels + "px"
+        valor += pixels;
+        bart.style.marginLeft = valor + "px"
     }
 </script>
