@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome da pessoa que você mais ama :
+    <input type="text" id="input_pessoa"> <br>
+    Digite o quanto você ama essa pessoa em número:
+    <input type="text" id="input_numero"> <br>
+    <button onclick="frase()">Expressar amor</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function frase() {
+        var numero = Number(input_numero.value);
+        var nome = input_pessoa.value;
+        var contagemW = 1;
+        resultado.innerHTML = ``;
+        while (contagemW <= numero) {
+            resultado.innerHTML += `${contagemW}. ${nome}, eu te amo! Sempre lembre disso!<br>`
+            contagemW += 1;
+        }
+    }
+</script>

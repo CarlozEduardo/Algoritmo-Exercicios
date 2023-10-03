@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o numero entre (20 e 100):
+    <input type="number" id="input_numero" min="20" max="100">
+    <button onclick="multiplicar()">Adoro múltiplos de 5</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function multiplicar() {
+        var numero = Number(input_numero.value);
+        var multiplos = numero;
+        var contagemW = 1
+        resultado.innerHTML = ``;
+        while (contagemW <= numero) {
+            resultado.innerHTML += `${multiplos = contagemW * 5} <br>`
+            contagemW += 1;
+        }
+    }
+</script>

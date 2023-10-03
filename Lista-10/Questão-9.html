@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite um número:
+    <input type="text" id="input_numero"> <br>
+    Digite uma frase:
+    <input type="text" id="input_frase"> <br>
+    <button onclick="exibir()">Papagaio</button>
+</body>
+
+</html>
+<script>
+    function exibir() {
+        var numero = Number(input_numero.value);
+        var frase = input_frase.value;
+        var contagemW = 1;
+        while (contagemW <= numero) {
+            alert(frase)
+            contagemW += 1;
+        }
+    }
+</script>

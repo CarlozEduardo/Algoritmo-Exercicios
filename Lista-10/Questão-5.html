@@ -1,0 +1,16 @@
+<button onclick="contagem()">Contar</button>
+<div id="resultado"></div>
+</body>
+</html>
+<script>
+function contagem() {
+    var contagem_while = 1;
+           while (contagem_while <= 30) {
+            if (contagem_while == 3 || contagem_while == 4 || contagem_while == 7 || contagem_while == 10 || contagem_while == 12) {
+            } else {
+                resultado.innerHTML += `${contagem_while} <br>`
+            }
+        contagem_while += 1;
+           }
+    }
+</script>

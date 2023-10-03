@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite um numero:
+    <input type="text" id="input_numero"> <br>
+    <button onclick="pares()">S2 Pares</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function pares() {
+        var numero = Number(input_numero.value);
+        var contagemW = 0;
+        while (contagemW <= numero) {
+            resultado.innerHTML += `${contagemW} <br>`
+            contagemW += 2;
+        }
+    }
+</script>
