@@ -10,6 +10,8 @@
 <body>
     Digite um numero:
     <input type="text" id="input_numero"> <br>
+    Digite um numero:
+    <input type="text" id="input_numero2"> <br>
     <button onclick="pares()">S2 Pares</button>
     <div id="resultado"></div>
 </body>
@@ -18,10 +20,11 @@
 <script>
     function pares() {
         var numero = Number(input_numero.value);
-        var contagemW = 0;
-        while (contagemW <= numero) {
-            resultado.innerHTML += `${contagemW} <br>`
-            contagemW += 2;
+        var contagemW = Number(input_numero2.value);
+        resultado.innerHTML = ``;
+        while (numero <= contagemW) {
+            resultado.innerHTML += `${numero} <br>`
+            numero += 2;
         }
     }
 </script>
