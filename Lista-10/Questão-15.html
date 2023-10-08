@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a quantidade de elefantes:
+    <input type="text" id="input_qtdElefante"> <br>
+    <button onclick="elefante()">Atazanar a médium</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function elefante() {
+        var wFinal = Number(input_qtdElefante.value);
+        var incomodam = ` incomodam, `
+        var wInicio = 1;
+        resultado.innerHTML = `1 elefante incomoda muita gente! <br>`
+        while (wInicio < wFinal) {
+            resultado.innerHTML += `${wInicio + 1} elefantes, ${incomodam = incomodam + ` incomodam, `} muito mais! <br>`
+            resultado.innerHTML += `1 elefante incomoda muita gente! <br>`
+            wInicio++
+        }
+    }
+</script>

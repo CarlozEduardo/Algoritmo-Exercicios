@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a quantidade voltas que o carro dará:
+    <input type="text" id="input_voltas"> <br>
+    <button onclick="katiau()">Iniciar corrida!</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function katiau() {
+        var voltas = Number(input_voltas.value);
+        var i = 1;
+
+        while (i <= voltas) {
+            resultado.innerHTML += ` Carro dando a ${i}ª volta<br>`
+            i++
+        }
+        resultado.innerHTML += `Corrida finalizada!`
+    }
+</script>

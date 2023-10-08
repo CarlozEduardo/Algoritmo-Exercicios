@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input_idade" onkeyup="tempo()">
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+
+    function tempo() {
+        var wFinal = Number(input_idade.value)
+        var wInicio = 1;
+        resultado.innerHTML = `0 anos (Primeira Infância) <br>`
+        while (wInicio <= wFinal) {
+            if (wInicio <= 4) {
+                resultado.innerHTML += `${wInicio} anos (Primeira Infância) <br>`
+            } else if (wInicio <= 6) {
+                resultado.innerHTML += `${wInicio} anos (Pré-escolar) <br>`
+            } else if (wInicio <= 10) {
+                resultado.innerHTML += `${wInicio} anos (Segunda Infância) <br>`
+            } else if (wInicio <= 18) {
+                resultado.innerHTML += `${wInicio} anos (Adolescência) <br>`
+            } else if (wInicio <= 50) {
+                resultado.innerHTML += `${wInicio} anos (Adulto) <br>`
+            } else if (wInicio <= 100) {
+                resultado.innerHTML += `${wInicio} anos (Melhor idade) <br>`
+            } else {
+                resultado.innerHTML += `${wInicio} anos (Matusalém) <br>`
+            }
+            wInicio++
+        }
+    }
+</script>
