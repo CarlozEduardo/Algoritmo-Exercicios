@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite quantos depositos você fez no banco:
+    <input type="text" id="input_depositos"> <br>
+    Digite o valor de cada depósito:
+    <input type="text" id="input_valor"> <br>
+    <button onclick="dindin()">Acompanhar grana</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function dindin() {
+        var depositos = Number(input_depositos.value);
+        var valor = Number(input_valor.value);
+        var total = 0, porcentagem = 0;
+        var i = 1;
+
+        resultado.innerHMTL = ""
+
+        while (i <= depositos) {
+            total = valor * i + porcentagem
+            if (i % 3 == 0) {
+                porcentagem = total * 0.01
+                total += porcentagem
+            }
+            resultado.innerHTML += `${i}º Mês: R$ ${total} <br>`
+            i++
+        }
+        resultado.innerHTML += `Total guardado: R$${total} <br>`
+    }
+</script>

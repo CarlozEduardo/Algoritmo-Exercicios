@@ -20,10 +20,11 @@
         var wFinal = Number(input_qtdElefante.value);
         var incomodam = ` incomodam, `
         var wInicio = 1;
-        resultado.innerHTML = `1 elefante incomoda muita gente! <br>`
+        resultado.innerHTML = ``
         while (wInicio < wFinal) {
-            resultado.innerHTML += `${wInicio + 1} elefantes, ${incomodam = incomodam + ` incomodam, `} muito mais! <br>`
             resultado.innerHTML += `1 elefante incomoda muita gente! <br>`
+            resultado.innerHTML += `${wInicio + 1} elefantes, ${incomodam += ` incomodam, `} muito mais! <br>`
+
             wInicio++
         }
     }
