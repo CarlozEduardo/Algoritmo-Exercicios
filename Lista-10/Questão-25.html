@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite um valor de 0 a 100:
+    <input type="text" id="input_valor"> <br>
+    <button onclick="MostrarDivisores()">Ver Divisores</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function MostrarDivisores() {
+        var valor = Number(input_valor.value);
+        var divisor = 1;
+        var numero = ``;
+        var primo = ``;
+
+        while (divisor <= valor) {
+
+            if (valor % divisor == 0) {
+                numero += `${divisor} <br>`
+                if (divisor % 2 == 1 && divisor % 3 == 1) {
+                    primo += `O numero ${divisor} é um primo <br>`
+                }
+            }
+            divisor++
+        }
+        resultado.innerHTML += numero;
+        resultado.innerHTML += primo;
+    }
+</script>
