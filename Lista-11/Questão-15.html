@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o nome do produto:
+    <input type="text" id="input_nomeProduto">
+    Digite o preço do produto:
+    <input type="text" id="input_precoProduto">
+    <button onclick="cadastrarProduto()">Cadastrar</button>
+    <button onclick="relatarEstoque()">Relatório de estoque</button>
+    <div id="div_estoque"></div>
+</body>
+
+</html>
+<script>
+    var listaNomeProduto = []
+    var listaPrecoProduto = []
+    function cadastrarProduto() {
+        var PrecoProduto = Number(input_precoProduto.value)
+        var nomeProduto = input_nomeProduto.value
+        listaNomeProduto.push(nomeProduto)
+        listaPrecoProduto.push(PrecoProduto)
+    }
+
+    function relatarEstoque() {
+        var estoque = "";
+
+        estoque += `Total de produtos : ${listaNomeProduto.length} <br><br>`
+
+        for (var produto = 0; produto < listaNomeProduto.length; produto += 1) {
+            estoque += `Produto ${produto + 1}: ${listaNomeProduto[produto]} <br>
+            Preço de compra: R$${listaPrecoProduto[produto]}.<br>
+            Vender por R$${listaPrecoProduto[produto] * 1.25} <br><br>`
+        }
+
+
+
+        var ProdutoCaro = 0;
+        var nomeCaro = 0
+        var SomaDosProdutos = 0;
+        for (var rodada = 0; rodada < listaNomeProduto.length; rodada += 1) {
+            if (ProdutoCaro < listaPrecoProduto[rodada]) {
+                ProdutoCaro = listaPrecoProduto[rodada];
+                nomeCaro = rodada
+            }
+            SomaDosProdutos += listaPrecoProduto[rodada];
+        }
+
+        var ProdutoBarato = ProdutoCaro;
+        var nomeBarato = 0
+        for (var rodada = 0; rodada < listaNomeProduto.length; rodada += 1) {
+            if (ProdutoBarato > listaPrecoProduto[rodada]) {
+                ProdutoBarato = listaPrecoProduto[rodada];
+                nomeBarato = rodada
+            }
+        }
+        var MediaDosProdutos = SomaDosProdutos / listaPrecoProduto.length
+
+        estoque += `
+        O nome do produto mais caro: ${listaNomeProduto[nomeCaro]} <br>
+        O nome do produto mais barato: ${listaNomeProduto[nomeBarato]} <br>
+        A soma dos preços de compra dos produtos: ${SomaDosProdutos} <br>
+        A média de preço de venda dos produtos: ${MediaDosProdutos} <br>
+        `
+
+        div_estoque.innerHTML = estoque
+    }
+</script>

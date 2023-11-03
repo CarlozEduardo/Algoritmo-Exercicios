@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o nome do produto:
+    <input type="text" id="input_nomeProduto">
+    Digite o preço do produto:
+    <input type="text" id="input_precoProduto">
+    <button onclick="cadastrarProduto()">Cadastrar</button>
+    <button onclick="relatarEstoque()">Relatório de estoque</button>
+    <div id="div_estoque"></div>
+</body>
+
+</html>
+<script>
+    var listaNomeProduto = []
+    var listaPrecoProduto = []
+    function cadastrarProduto() {
+        listaNomeProduto.push(input_nomeProduto.value)
+        listaPrecoProduto.push(Number(input_precoProduto.value))
+    }
+
+    function relatarEstoque() {
+        var estoque = "";
+
+        estoque += `Total de produtos : ${listaNomeProduto.length} <br><br>`
+
+        for (var produto = 0; produto < listaNomeProduto.length; produto += 1) {
+            estoque += `Produto ${produto + 1}: ${listaNomeProduto[produto]} <br>
+            Preço de compra: R$${listaPrecoProduto[produto]}.<br>
+             Vender por R$${listaPrecoProduto[produto] * 1.25} <br><br>`
+        }
+
+        div_estoque.innerHTML = estoque
+    }
+</script>

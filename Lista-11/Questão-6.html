@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome do filme:
+    <input type="text" id="input_filme">
+    <button onclick="mostrarFilmes()">Cadastrar</button>
+    <span id="exibirLista"></span>
+</body>
+</html>
+<script>
+    listaFilmes = []
+    function mostrarFilmes() {
+        listaFilmes.push(input_filme.value);
+        for(var filme = 0; filme < listaFilmes.length; filme += 1) {
+            exibirLista.innerHTML += `${listaFilmes[filme]} <br>`
+        }
+    }
+</script>

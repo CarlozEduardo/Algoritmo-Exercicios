@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o nome da linha que você já pegou:
+    <input type="text" id="input_linha">
+    <button onclick="registrarLinha()">Gravar Busão</button> <br>
+    Pesquise por uma linha:
+    <input type="text" id="input_pesquisa">
+    <button onclick="pesquisarLinha()">Pesquisar</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    var listaLinha = [];
+    function registrarLinha() {
+        var exibirLinha = ``
+        listaLinha.push((input_linha.value).toLowerCase());
+        for (var linha = listaLinha.length - 1; linha >= 0; linha -= 1) {
+            exibirLinha += `${listaLinha[linha]} <br>`
+        }
+        resultado.innerHTML = exibirLinha;
+    }
+
+    function pesquisarLinha() {
+        var pesquisa = input_pesquisa.value
+        var exibirPesquisa = `Você nunca pegou essa linha`
+        var numeroL = [];
+        var linhaPega = 0;
+
+        for (var rodada = 0; rodada < listaLinha.length; rodada += 1) {
+            if (pesquisa == listaLinha[rodada]) {
+                linhaPega += 1
+                numeroL += [rodada + 1];
+                exibirPesquisa = `Você já pegou essa linha ${linhaPega} vezes, nessa ordem: `
+            }
+        }
+        for (var texto = 0; texto < linhaPega; texto++) {
+            if (linhaPega > texto + 1) {
+                exibirPesquisa += `${numeroL[texto]}, `
+            } else {
+                exibirPesquisa += `${numeroL[texto]}`
+            }
+        }
+        resultado.innerHTML += exibirPesquisa;
+    }
+</script>

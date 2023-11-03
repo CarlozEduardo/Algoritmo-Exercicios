@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Qual destino da sua viagem?
+    <input type="text" id="input_destino">
+    <button onclick="salvarDestino()">Adicionar destino</button> <br>
+    <button onclick="analisarPrimeiraViagem()">Primeira viagem</button>
+    <button onclick="analisarTerceiraViagem()">Segunda viagem</button>
+    <button onclick="analisarUltimaViagem()">Ultimo viagem</button>
+    <div id="div_viagem"></div>
+</body>
+
+</html>
+<script>
+    var listaViagem = [];
+    function salvarDestino() {
+        var viagem = input_destino.value;
+        listaViagem.push(viagem);
+    }
+    function analisarPrimeiraViagem() {
+        if (listaViagem.length >= 1) {
+            div_viagem.innerHTML += `${listaViagem[0]}<br>`
+        } else {
+            div_viagem.innerHTML += "Ainda não viajou<br>"
+        }
+    }
+    function analisarTerceiraViagem() {
+        if (listaViagem.length > 2) {
+            div_viagem.innerHTML += `${listaViagem[2]} <br>`
+        } else {
+            div_viagem.innerHTML += "Ainda não fez a terceira viagem <br>"
+        }
+    }
+    function analisarUltimaViagem() {
+        if (listaViagem.length >= 1) {
+            div_viagem.innerHTML += `${listaViagem[listaViagem.length - 1]}<br>`
+        } else {
+            div_viagem.innerHTML += "Ainda não fez a ultima viagem<br>"
+        }
+    }
+</script>
