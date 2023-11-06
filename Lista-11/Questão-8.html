@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Digite o nome do aluno:
     <input type="text" id="input_aluno">
     <button onclick="mostrarAlunos()">Cadastrar</button>
     <DIV id="exibirLista"></DIV>
 </body>
+
 </html>
 <script>
-    listaAlunos = []
+    var listaAlunos = [];
     function mostrarAlunos() {
         var lista = ""
         listaAlunos.push(input_aluno.value);
-        for(var aluno = listaAlunos.length; aluno > 0 ; aluno -= 1) {
+
+        for (var aluno = listaAlunos.length; aluno > 0; aluno -= 1) {
             lista += `${listaAlunos[aluno - 1]}. <br>`
         }
+
         exibirLista.innerHTML = lista
     }
 </script>

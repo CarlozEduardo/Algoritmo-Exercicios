@@ -31,40 +31,32 @@
     function relatarEstoque() {
         var estoque = "";
 
+        var ProdutoCaro = 0;
+        var IndiceNomeCaro = 0;
+        var SomaDosProdutos = 0;
+        var ProdutoBarato = 0;
+        var IndiceNomeBarato = listaPrecoProduto[0];
         estoque += `Total de produtos : ${listaNomeProduto.length} <br><br>`
 
         for (var produto = 0; produto < listaNomeProduto.length; produto += 1) {
             estoque += `Produto ${produto + 1}: ${listaNomeProduto[produto]} <br>
             Preço de compra: R$${listaPrecoProduto[produto]}.<br>
             Vender por R$${listaPrecoProduto[produto] * 1.25} <br><br>`
-        }
-
-
-
-        var ProdutoCaro = 0;
-        var nomeCaro = 0
-        var SomaDosProdutos = 0;
-        for (var rodada = 0; rodada < listaNomeProduto.length; rodada += 1) {
-            if (ProdutoCaro < listaPrecoProduto[rodada]) {
-                ProdutoCaro = listaPrecoProduto[rodada];
-                nomeCaro = rodada
-            }
-            SomaDosProdutos += listaPrecoProduto[rodada];
-        }
-
-        var ProdutoBarato = ProdutoCaro;
-        var nomeBarato = 0
-        for (var rodada = 0; rodada < listaNomeProduto.length; rodada += 1) {
             if (ProdutoBarato > listaPrecoProduto[rodada]) {
                 ProdutoBarato = listaPrecoProduto[rodada];
                 nomeBarato = rodada
+            } else {
+                ProdutoCaro = listaPrecoProduto[rodada];
+                nomeCaro = rodada
             }
+            SomaDosProdutos += listaPrecoProduto[rodada] * 1.25;
         }
+
         var MediaDosProdutos = SomaDosProdutos / listaPrecoProduto.length
 
         estoque += `
-        O nome do produto mais caro: ${listaNomeProduto[nomeCaro]} <br>
-        O nome do produto mais barato: ${listaNomeProduto[nomeBarato]} <br>
+        O nome do produto mais caro: ${listaNomeProduto[IndiceNomeCaro]} <br>
+        O nome do produto mais barato: ${listaNomeProduto[IndiceNomeBarato]} <br>
         A soma dos preços de compra dos produtos: ${SomaDosProdutos} <br>
         A média de preço de venda dos produtos: ${MediaDosProdutos} <br>
         `
